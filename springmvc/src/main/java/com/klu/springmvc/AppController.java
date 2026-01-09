@@ -1,0 +1,23 @@
+package com.klu.springmvc;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@RequestMapping("/app")
+public class AppController {
+  
+  @GetMapping("/f1")
+  public String test() {
+    return "Welcome to Spring Boot Framework";
+  }
+  
+  //localhost:9095/app/add/10/20
+  @RequestMapping("/add/{a}/{b}")
+  public int add(@PathVariable("a") int a, @PathVariable("b") int b) {
+    return a+b;
+  }
+
+}

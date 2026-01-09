@@ -1,0 +1,26 @@
+package com.klu.springdi;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
+@Component
+public class Address {
+	@Value("hostel3")
+    String hname;
+	@Value("300")
+     int rno;
+	public Address() {
+		
+	}
+	public Address(String hname, int rno) {
+		super();
+		this.hname = hname;
+		this.rno = rno;
+	}
+	@Override
+	public String toString() {
+		return "Address [hname=" + hname + ", rno=" + rno + "]";
+	}
+	
+	
+
+}

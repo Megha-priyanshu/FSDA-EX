@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="
+           http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context-3.1.xsd">
+           
+ <context:annotation-config />
+ <context:component-scan base-package="com.klu.springdi"/>
+
+
+<!--<bean id="a1" class="com.klu.springdi.Address">
+	<constructor-arg value="hostel1"></constructor-arg>
+	<constructor-arg value="100" type="int"></constructor-arg>
+</bean>
+
+<bean id="a2" class="com.klu.springdi.Address">
+	<constructor-arg value="hostel2"></constructor-arg>
+	<constructor-arg value="200" type="int"></constructor-arg>
+</bean>-->
+    
+<bean id="s1" class="com.klu.springdi.Student">
+	<property name="id" value="1"></property>
+	<property name="name" value="s1name"></property>
+	<!--<property name="address" ref="a1"></property>-->
+	<property name="marks">
+		<list>
+			<value> 98 </value>
+			<value> 96 </value>
+			<value> 100 </value>
+		</list>
+	</property>
+	<property name="course">
+		<set>
+			<value> FSAD </value>
+			<value> DAA </value>
+			<value> CIS </value>
+		</set>
+	</property>
+	<property name="result">
+		<map>
+			<entry key="CIS" value="98"></entry>
+			<entry key="DAA" value="96"></entry>
+			<entry key="FSAD" value="100"></entry>
+		</map>
+	</property>
+</bean>
+
+</beans>

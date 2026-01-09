@@ -1,0 +1,66 @@
+package com.klu.springdi;
+
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+
+public class Student {
+	int id;
+	String name;
+	@Autowired
+	//@Qualifier("a2)
+	Address address;
+	
+	List<Integer> marks;
+	Set<String> course;
+	Map<String, Integer> result;
+	
+	
+	public List<Integer> getMarks() {
+		return marks;
+	}
+	public void setMarks(List<Integer> marks) {
+		this.marks = marks;
+	}
+	public Set<String> getCourse() {
+		return course;
+	}
+	public void setCourse(Set<String> course) {
+		this.course = course;
+	}
+	public Map<String, Integer> getResult() {
+		return result;
+	}
+	public void setResult(Map<String, Integer> result) {
+		this.result = result;
+	}
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public Address getAddress() {
+		return address;
+	}
+	public void setAddress(Address address) {
+		this.address = address;
+	}
+	@Override
+	public String toString() {
+		return "Student [id=" + id + ", name=" + name + ", address=" + address + ", marks=" + marks + ", course="
+				+ course + ", result=" + result + "]";
+	}
+	
+	
+
+}
